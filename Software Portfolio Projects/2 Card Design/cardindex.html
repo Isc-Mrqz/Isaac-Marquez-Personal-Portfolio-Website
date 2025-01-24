@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to the CSS/Stylesheets -->
+    <link rel="stylesheet" href="/Software Portfolio Projects/2 Card Design/cardstyle.css">
+    
+    <!-- Link to the Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Link to the Google Font named "Orbitron" -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
+
+      <!-- Link to the Website Icon --> 
+    <link rel="icon" href="/Software Portfolio Projects/2 Card Design/Images/IsaacMarquezLogo.png">
+    
+    <!-- Website Title -->
+    <title>Card Component</title>
+
+</head>
+<body>
+
+    <!-- Card Component   -->
+    <div class="Card-Component" data-state="#AboutSection">
+        <header>
+          <!-- Image used as the background-image of the Card header -->
+          <div class="Card-Component-Background" style="background-image: url('Images/CardComponentBackground.jpg')"></div>
+
+          <!-- Image of the user -->
+          <img class="Card-Component-userImage" src="/Software Portfolio Projects/2 Card Design/Images/Isaac.png" alt="Isaac Marquez's Image" />
+
+          <!-- Name and Title of the User -->
+          <h1 class="Card-Component-userName">Isaac Marquez</h1>
+          <h2 class="Card-Component-userTitle">Web Developer</h2>
+        </header>
+
+        <!-- Main Content of the Card Component -->
+        <div class="Card-Component-wholeContent">
+
+          <!-- About Section -->
+          <div class="Card-Component-Sections is-active" id="AboutSection">
+            <div class="Card-Component-Contents">
+              <h1>ABOUT</h1>
+              <p>I am Isaac Gerard Senoy Marquez, your friendly and reliable web developer based in the United Arab Emirates! I am currently pursuing a Bachelor of Science in Creative Computing at Bath Spa University Academic Centre, RAK.</p>
+            </div>
+
+            <!-- Social Media Buttons -->
+            <div class="Card-Component-userSocialMedia">
+                <a href="https://www.facebook.com/profile.php?id=100056264744414&mibextid=eQY6cl" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/yzach.grd?igsh=bzIwYTdpeXJjbDdt&utm_source=qr" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.youtube.com/@IsaacMarquez_BathSpaRAK" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                <a href="https://www.linkedin.com/in/isaac-marquez-0139812a9" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="mailto:isaacgerard22@gmail.com" target="_blank"><i class='bx bxl-gmail' ></i></a>
+            </div>
+          </div>
+
+          <!-- Services Section -->
+          <div class="Card-Component-Sections" id="ServicesSection">
+            <div class="Card-Component-Contents">
+                <h1>SERVICES</h1>
+                <div class="Card-Component-servicesContents" >
+                  <h4><i class='bx bx-code-alt'> </i> Web Development</h4>
+                  <p>I develop websites that perfectly encapsulate and capture your brand identity.</p>
+                </div>
+                <div class="Card-Component-servicesContents">
+                  <h4><i class='bx bx-laptop'> </i> Web Designing</h4>
+                  <p>I design websites that are exactly tailored to your demands and wants.</p>
+                </div>
+                <div class="Card-Component-servicesContents">
+                  <h4><i class='bx bx-game'> </i> Game Development</h4>
+                  <p>I create interactive games that immerse their users in a whole new gaming world, turning their dreams into realities.</p>
+                </div>
+                <div class="Card-Component-servicesContents">
+                  <h4><i class='bx bxl-javascript'> </i> Creative Coding</h4>
+                  <p>I specialize in producing art in various forms to create numerous interactive and immersive digital experiences.</p>
+                </div>
+                <div class="Card-Component-servicesContents">
+                  <h4><i class='bx bx-paint'> </i> App Prototyping</h4>
+                  <p>I am skilled in designing prototypes for your apps to transform your innovative ideas into fully functional apps.</p>
+                </div>
+                <div class="Card-Component-servicesContents">
+                  <h4><i class='bx bx-user-pin'> </i> UI/UX Design</h4>
+                  <p>I create digital interfaces that are both visually compelling and user-friendly.</p>
+                </div>
+            </div>
+          </div>
+
+          <!-- Contact Section -->
+          <div class="Card-Component-Sections" id="ContactSection">
+            <div class="Card-Component-Contents">
+              <h1>CONTACT</h1>
+                  <p><i class='bx bxs-location-plus'><a href="#"> Al Qulaya'ah, Sharjah, United Arab Emirates</a></i></p>
+                  <p><i class='bx bx-phone-call'><a href="tel:+97156 663 0388" target="_blank"> +97156 663 0388</a></i></p>
+                  <p><i class='bx bxl-gmail'><a href="mailto:isaacgerard22a@gmail.com" target="_blank"> isaacbathspa@gmail.com</a></i></p>
+                  <p><i class='bx bx-laptop'><a href="" target="_blank"> Personal Portfolio Website Link</a></i></p>
+                  <p><i class='bx bxs-camera'><a href="https://igm-softwaredeveloper.github.io/Isaac-Marquez-Multimedia-Portfolio/home.html" target="_blank"> Multi-media Portfolio Link</a></i></p>
+                  
+                <!-- Contact Me Button -->
+                <button class="Contact-Me-Button">CONTACT ME</button>
+            </div>
+          </div>
+
+          <!-- Card Component Buttons -->
+          <div class="Card-Component-Buttons">
+            <button data-section="#AboutSection" class="is-active">ABOUT</button>
+            <button data-section="#ServicesSection">SERVICES</button>
+            <button data-section="#ContactSection">CONTACT</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>Copyright &copy; 2024 | Card Component | Made by: Isaac Gerard S. Marquez</footer>
+
+      <!-- JavaScript -->
+      <script src="/Software Portfolio Projects/2 Card Design/cardscript.js"></script>
+
+</body> 
+</html>
