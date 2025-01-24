@@ -375,7 +375,7 @@ body.loaded { overflow: visible; }
   transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus-visible, .active) { color: #c0c0c0; }
+.navbar-link:is(:hover, :focus-visible, .active) { color: #c59268; }
 
 
 
@@ -401,7 +401,7 @@ body.loaded { overflow: visible; }
 
 .social-link { font-size: 1.8rem; }
 
-.social-link:is(:hover, :focus-visible) { color: #493036; }
+.social-link:is(:hover, :focus-visible) { color: #c59268; }
 
 
 
