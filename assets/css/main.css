@@ -81,12 +81,16 @@
 }
 
 .hero-subtitle {
-  color: var(--jet);
+  color: #c59268;
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-block-end: 20px;
   font-weight: 900;
 }
+
+.headline-lg {
+  color: #c59268;
+}  
 
 .hero-subtitle span {
   font-size: 50px;
