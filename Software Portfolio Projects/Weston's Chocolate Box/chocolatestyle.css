@@ -1,0 +1,900 @@
+/* I imported Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+/* This is the base styling for the HTML and body including the font used, smooth scrolling, and preventing horizontal overflow */
+html, body {
+    font-family: 'Fjalla One', sans-serif; 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* This is the global styling used such as resetting both the margin and padding for all elements*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* This is the styling used for both the Navigation Menu and Home Page */
+/* Styling used for the section including its entire lay-out, color, and size */
+section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background-color: #f0c880;
+    transition: 0.6s;
+}
+
+/* This styles the Navigation Menu including its lay-out and size. */
+.Navigation-Menu {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 100px;
+}
+
+/* This styles the website's logo such as position and size. */
+.Westons-Chocolate-Box-LOGO {
+    position: relative;
+    max-width: 90px;
+    transition: 0.6s; 
+}
+
+/* This adds an on hover effect to the logo that enlarges it */
+.Westons-Chocolate-Box-LOGO:hover {
+    transform: scale(1.1);
+}
+
+/* These following lines styles the navigational links */
+.Navigation-Menu ul {
+    position: relative;
+    display: flex;
+}
+
+/* Removes the bullet point */
+.Navigation-Menu ul li {
+    list-style: none;
+}
+
+/* Styles the position and text color */
+.Navigation-Menu ul li a {
+    display: inline-block;
+    position: relative; 
+    color: black;
+    margin-left: 65px;
+    text-decoration: none;
+}
+
+/* This is to add an underline on the navigational links upon hover */
+.Navigation-Menu ul li a::after {
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    bottom: -5px; 
+    width: 100%;
+    height: 2px; 
+    background-color: white; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+}
+
+/* This fully unveils the underline */
+.Navigation-Menu ul li a:hover::after {
+    transform: scaleX(1); 
+}
+
+/* Styling for the Responsive Menu Button */
+/* This hides the Responsive Menu Button by default */
+.Website-Menu-Button {
+    display: none; 
+}
+
+/* This styles the lay-out of the .Home-Page-Contents container  */
+.Home-Page-Contents {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* This styles the lay-out and size of the .Home-Page-Contents-Description container  */
+.Home-Page-Contents-Description {
+    position: relative;
+    max-width: 640px;
+    margin-top: 80px;
+}
+
+/* This styles the h1 or heading tag within the Home-Page-Contents-Description container includings its text color, size, and bottom margin. */
+.Home-Page-Contents-Description h1 {
+    color: black;
+    font-size: 90px;
+    margin-bottom: 10px;
+}
+
+/* This styles the p or paragraph tag within the Home-Page-Contents-Description container includings its text color and size. */
+.Home-Page-Contents-Description p {
+    color: white;
+    font-size: 21px;
+}
+
+/* This styles the anchor tag within the Home-Page-Contents-Description container includings its text color, size, margin, positioning, and rounded corners. */
+.Home-Page-Contents-Description a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.6S;
+}
+
+/* This adds an on hover effect to the button including making the text bold, changing its background and text color, and enlarging it. */
+.Home-Page-Contents-Description a:hover {
+    font-weight: bold;
+    transform: scale(1.2);
+    background-color: black; 
+    color: white;
+}
+
+/* This styles the size and padding of the Chocolate-Box-Image container */
+.Chocolate-Box-Image {
+    width: 700px;
+    padding-right: 0;
+    justify-content: center; 
+}
+
+/* This styles the size of the image within the Chocolate-Box-Image container */
+.Chocolate-Box-Image img {
+    max-width: 700px;
+    width: 100%; 
+    height: auto;
+    transition: 0.9s; 
+}
+
+/* This enlarges the image within the Chocolate-Box-Image container upon hover */
+.Chocolate-Box-Image img:hover {
+    transform: scale(1.2);
+}
+
+/* The following lines are the styling used for the buttons that are responsible for the color changing feature. */
+.Color-Change-Button {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.Color-Change-Button li {
+    display: inline-block;
+    margin: 0 25px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+/* This enlarges the button within the Color-Change-Button container upon hover */
+.Color-Change-Button li:hover {
+    transform: scale(1.4);
+}
+
+/* This sets the maximum width for the image buttons */
+.Color-Change-Button li img {
+    max-width: 80px; 
+}
+
+
+/* About Us Section */
+/* This styles the About-Section container. */
+.About-Section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 100px;
+    background-color: white;
+    align-items: center;
+    text-align: left;
+}
+
+/* This styles the h1 or heading tag within the ".About-Section-Description" container */
+.About-Section-Description h1 {
+    font-size: 100px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* This styles the p or paragraph tag within the ".About-Section-Description" container */
+.About-Section-Description p {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.719);
+    margin-bottom: 25px;
+}
+
+/* This styles the anchor tags within the ".About-Section-Description" container */
+.About-Section-Description a {
+    display: inline-block;
+    color: black;
+    background-color: #f0c880;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition:  0.6s;
+}
+
+/* This adds an on hover effect to the button including making the text bold, changing its background and text color, and enlarging it. */
+.About-Section-Description a:hover {
+    font-weight: bold;
+    transform: scale(1.2);
+    background-color: black; 
+    color: white;
+}
+
+
+/* This styles the image within the ".About-Section-Image" container making sure that it shows the full width of the image and gives it a 5 pixel rounded corners */
+.About-Section-Image img {
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.6s;
+}
+
+/* This enlarges the image within the ".About-Section-Image" container upon hover */
+.About-Section-Image img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Product Section */
+.Products-Container {
+    padding: 100px;
+    min-height: 100vh;
+    background-color: #f0c880;
+}
+
+/* This styles the h1 or heading tag within the ".Products-Container" container */
+.Products-Container h1 {
+    font-size: 100px;
+    color: black;
+    margin-bottom: 20px;
+}
+  
+/* Styling that sets the font size and adds a bottom margin */
+.Occasions-Category,
+.Chocolate-Products-Container,
+.Basket-Container {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.Chocolate-Products-Container h3 {
+    margin-bottom: 15px;
+}
+  
+/* This styles the ".chocolate-item" container. */
+.chocolate-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+  
+/* This styles the image within the ".chocolate-item" to have a maximum width of 100 pixels and 10 pixels of right margin.  */
+.chocolate-item img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+  
+/* This styling allows the section to take up the remaining space. */
+.chocolate-item .info {
+    flex-grow: 1;
+}
+  
+/* Add 5 pixels of right margin. */
+.chocolate-item label {
+    margin-right: 5px;
+}
+  
+/* This sets the height and width of the input fields. */
+.chocolate-item input {
+    height: 25px;
+    width: 50px;
+}
+  
+/* This styles the button within the ".chocolate-item" container */
+.chocolate-item button {
+    color: white;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition:  0.6s;
+}
+
+/* This adds an on hover effect to the button including making the text bold, changing its background and text color, and enlarging it. */
+.chocolate-item button:hover {
+    font-weight: bold;
+    transform: scale(1.2);
+    background-color: black; 
+    color: white;
+}
+  
+/* This styling is used to add a line for separation. */
+.Basket-Container {
+    border-top: 2px solid #333;
+    padding-top: 10px;
+}
+  
+/* This is to remove the bullet points and padding to the list items. */
+.Basket-Container ul {
+    list-style: none;
+    padding: 0;
+}
+  
+/* This is for the positioning and aligning of the list items. */
+.Basket-Container li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+  
+/* This styles the button within the ".Basket-Container" container */
+.Basket-Container button {
+    background-color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 20px;
+    margin-top: 10px;
+    transition:  0.6s;
+}
+  
+/* This adds an on hover effect to the button including making the text bold, changing its background and text color, and enlarging it. */
+.Basket-Container button:hover {
+    font-weight: bold;
+    transform: scale(1.2);
+    background-color: black; 
+    color: white;
+}
+
+
+/* Contact Section */
+/* This styles the Main Container for the Contact section such as its full viewport height and center alignment. */
+.Main-Contact-Container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: white;
+}
+
+/* It shows the full width of the viewport and adds a background color. */
+#Contact-Form-Container {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background: #f0c880;
+}
+
+/* This sets the width of the elements child elements of the Contact Form Container to 60%. */
+#Contact-Form-Container > * {
+    width: 60%;
+}
+
+/* This styles the left side container to have a background image. */
+#Contact-Form-Container .Left-Contact-Container {
+    background: url("/Class Activities/Weston's Chocolate Box/Images/ChocolateContact.jpg") center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* This styles the the texts within the class named "Company-Contact-Information" to have a set font size, text color, and background color. Their alignment is also set. */
+.Company-Contact-Information {
+    font-size: 20px;
+    color: white;
+    background-color: #333333b1;
+    padding: 30px;
+    line-height: 1.8;
+}
+
+/* This gives the heading 3 (h3) to have a text color. */
+#Contact-Form-Container .Left-Contact-Container .Company-Contact-Information div h3 {
+    color: #f0c880;
+}
+
+/* This adds 30 pixeld of padding to the containers. */
+#Contact-Form-Container .Right-Contact-Container {
+    padding: 30px;
+}
+
+
+/* This sets the h1 or heading tag's font size to 50 pixels, a text color, center alignment, and bottom margin. */
+#Contact-Form-Container .Right-Contact-Container h1 {
+    font-size: 50px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* This is the styling for the right container. */
+#Contact-Form-Container .Right-Contact-Container form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* This adds 10 pixels of bottom margin for spacing between the containers. */
+#Contact-Form-Container .Right-Contact-Container form .Right-Contact-Form-Inputs {
+    margin-bottom: 10px;
+}
+
+/* This is the styling for the input forms. */
+#Contact-Form-Container .Right-Contact-Container form .Right-Contact-Form-Inputs * {
+    min-height: 50px;
+    border: 1px solid #e6e6e6;
+    padding: 0 20px;
+}
+
+/* This is the styling for the label within the form. */
+#Contact-Form-Container .Right-Contact-Container form .Right-Contact-Form-Inputs label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #333;
+}
+
+/* This ensures that the input fields span the entire width. */
+#Contact-Form-Container .Right-Contact-Container form .Right-Contact-Form-Inputs:first-of-type input {
+    width: 100%;
+}
+
+/* This ensures that the input fields span the entire width. */
+#Contact-Form-Container .Right-Contact-Container form .Right-Contact-Form-Inputs input {
+    width: 100%;
+}
+  
+/* This sets the text placeholder color to #333333b5. */
+#Contact-Form-Container .Right-Contact-Container form .Right-Contact-Form-Inputs input::placeholder,
+#Contact-Form-Container .Right-Contact-Container form .Right-Contact-Form-Inputs textarea::placeholder {
+    color: #333333b5;
+}
+
+/* This styles the textareas in the form. */
+#Contact-Form-Container .Right-Contact-Container form .Right-Contact-Form-Inputs textarea {
+    min-height: 100px;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+/* This styles the button within the contact form. */
+#Contact-Form-Container .Right-Contact-Container form button {
+    color: white;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: none;
+    transition:  0.6s;
+}
+
+/* This is the styling for the on hover effect of the button within the contact form. */
+#Contact-Form-Container .Right-Contact-Container form button:hover {
+    font-weight: bold;
+    transform: scale(1.05);
+    background-color: black; 
+    color: white;
+}
+
+
+
+/* Login and Signup Section */
+/* THis styles the Main Container of the Login and Signup Section. */
+.LoginandSignUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0c880;
+}
+
+/* This styles the entire Login and Signup container including its alignment, size, color, rounded corners, and shadow effect. */
+.LoginandSignUp-Container {
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.678);
+    overflow: hidden;
+}
+
+    /* This sets the h1 or heading tag's font size by 55 pixels. */
+    .LoginandSignUp-Container h1 {
+        font-size: 55px;
+    }
+
+    /* This sets the p or paragraph tag's font size by 16 pixels. */
+    .LoginandSignUp-Container p {
+        font-size: 16px;
+    }
+
+/* Ensures that the form takes up the full width. */
+form{ width: 100%; }
+
+/* This is the styling for the Form container including its positon, size, text color, and background color. */
+.FormContainer {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    text-align: center;
+    align-items: center;
+    color: #333;
+    background-color: white;
+    padding: 15px;
+    z-index: 1;
+    transition: .8s ease-in-out 1s, visibility 0s .9s;
+}
+
+    /* This is for the transition effect of the active state container. */
+    .LoginandSignUp-Container.active .FormContainer{ right: 50%; }
+
+    .FormContainer.register { visibility: hidden; }
+        .LoginandSignUp-Container.active .FormContainer.register { visibility: visible; }
+
+/* This is the styling for the input fields. */
+.Input-Container {
+    position: relative;
+    margin: 20px;
+}
+
+    .Input-Container input {
+        width: 100%;
+        color: #333;
+        background: #33333316;
+        font-size: 14px;
+        padding: 15px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+
+        .Input-Container input::placeholder {
+            color: #333;
+        }
+    
+    .Input-Container i {
+        position: absolute;
+        font-size: 30px;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+/* This is the styling for the password link. */
+.Forgot-Password-Container { margin: -15px 0 15px; }
+    .Forgot-Password-Container a {
+        font-size: 13px;
+        color: #333;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+/* This styles the button for the Login and Signup form. */
+.LoginandSignUp-Button {
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    text-decoration: none;
+    transition: 0.6S;
+}
+
+/* This styles the on hover effect for the button for the Login and Signup form. */
+.LoginandSignUp-Button:hover {
+    transform: scale(1.2);
+}
+
+/* This styling is for the Toggle switch container that is responsible for switching between login and signup forms. */
+.Toggle-Container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+    /* This is for the transition effect of the toggle switch. */
+    .Toggle-Container::before {
+        content: '';
+        position: absolute;
+        background: #333;
+        height: 100%;
+        width: 300%;
+        left: -250%;
+        border-radius: 100px;
+        z-index: 2;
+        transition: 2s ease-in-out;
+    }
+
+        .LoginandSignUp-Container.active .Toggle-Container::before { left: 50%; }
+
+.Toggle-Switch {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    color: white;
+    z-index: 2;
+    transition: .9s ease-in-out;
+}
+
+    .Toggle-Switch.Left-Toggle-Button { 
+        left: 0;
+        transition-delay: 1s; 
+    }
+        .LoginandSignUp-Container.active .Toggle-Switch.Left-Toggle-Button {
+            left: -50%;
+            transition-delay: .8s;
+        }
+
+    .Toggle-Switch.Right-Toggle-Button { 
+        right: -50%;
+        transition-delay: .8s;
+    }
+        .LoginandSignUp-Container.active .Toggle-Switch.Right-Toggle-Button {
+            right: 0;
+            transition-delay: 1s;
+        }
+
+    .Toggle-Switch p { margin-bottom: 20px; }
+
+    .Toggle-Switch .LoginandSignUp-Button {
+        width: 150px;
+        height: 50px;
+        color: #333;
+        background-color: white;
+    }
+
+
+/* Media Queries for Responsiveness */
+
+/* Home Section */
+/* Styling for screens 768px wide or smaller. */
+@media (max-width: 768px) {
+
+    /* When viewed in smaller screens, it reduces the padding but adds additional padding at the bottom */
+    section {
+        padding: 30px;
+        padding-bottom: 160px; 
+    }
+    
+    /* This is for the navigation menu */
+    .Navigation-Menu {
+        padding: 20px 30px;
+    }
+
+    /* Makes the website logo smaller */
+    .Navigation-Menu .Westons-Chocolate-Box-LOGO {
+        max-width: 55px;
+    }
+
+    /* The following lines adjusts the navigation menu when viewed in smaller screens */
+    .Navigation-Menu ul {
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        visibility: hidden;
+        transition: 0.6s;
+        opacity: 0;
+        z-index: 10;
+    }
+
+    /* This unveils the Navigation-Menu when active */
+    .Navigation-Menu ul.active { 
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* This styles the anchor tags */
+    .Navigation-Menu ul li a {
+        margin: 20px;
+        color: black;
+        font-size: 45px;
+        font-weight: 300;
+    }
+
+    /* This styles the anchor tags when hovered */
+    .Navigation-Menu ul li a:hover {
+        color: #f0c880; 
+    }
+
+    /* This is the styling for the responsive menu button */
+    .Website-Menu-Button {
+        display: block;
+        position: fixed;  
+        top: 20px;        
+        right: 25px;       
+        font-size: 40px;
+        background-color: gray;
+        border-radius: 5px;
+        z-index: 100;      
+        cursor: pointer;
+    }
+
+    /* This is the styling for the responsive menu button when active */
+    .Website-Menu-Button.active {
+        background-color: gray;
+        filter: invert(1);
+    }
+
+    /* This sets the flex direction of the Home-Page-Contents container to a column which stacks its child elements vertically */
+    .Home-Page-Contents {
+        flex-direction: column;
+    }
+
+    /* Ensures that it takes the full width of its container */
+    .Home-Page-Contents .Home-Page-Contents-Description {
+        max-width: 100%;
+        padding-right: 10px;
+    }
+
+    /* This sets the h1 or heading tag's font size by 55 pixels */
+    .Home-Page-Contents .Home-Page-Contents-Description h1 {
+        font-size: 55px;
+    }
+
+    /* This sets the anchor tags' font size by 14 pixels and adjusts its size */
+    .Home-Page-Contents .Home-Page-Contents-Description a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* This styles the size and positioning of the image making sure it is in the center */
+    .Home-Page-Contents .Chocolate-Box-Image {
+        width: 100%;
+        display: flex;
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    /* This sets the maximum width of the image to 350px */
+    .Home-Page-Contents .Chocolate-Box-Image img {
+        max-width: 350px;
+    }
+
+    /* This styles the image for the Color-Change-Button */
+    .Color-Change-Button li img {
+        max-width: 75px;
+    }
+}
+
+/* About Us Section */
+/* Styling for screens 768px wide or smaller. */
+@media (max-width: 768px) {
+    .About-Section {
+        /* This adjusts the lay-out to a single column */
+        grid-template-columns: 1fr;
+        padding: 50px 30px;
+        text-align: center;
+    }
+
+    /* This reduces the size of the h1 or heading tag within the ".About-Section-Description" container */
+    .About-Section-Description h1 {
+        font-size: 50px;
+    }
+
+    /* This reduces the size of the p or paragraph tag within the ".About-Section-Description" container */
+    .About-Section-Description p {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+
+/* Products Section */
+/* Styling for screens 768px wide or smaller. */
+@media (max-width: 768px){
+
+    .Products-Container{
+        padding: 20px;
+    }
+
+    /* This lowers the h1's font size to 50 pixels */
+    .Products-Container h1 {
+        font-size: 50px;
+    }   
+}
+
+
+
+/* Contact Section */
+/* Styling for screens 768px wide or smaller. */
+@media (max-width: 768px){
+    #Contact-Form-Container {
+      flex-direction: column-reverse;
+    }
+    #Contact-Form-Container > * {
+      width: 100%;
+    }
+    #Contact-Form-Container .Left-Contact-Container {
+      display: none;
+    }
+}
+
+
+
+/* Login and Signup Section */
+/* Styling for screens 768px wide or smaller. */
+@media (max-width: 768px){
+    .LoginandSignUp-Container{ height: calc(100vh - 60px); }
+
+    .FormContainer{
+        bottom: 0;
+        height: 80%;
+        width: 100%;
+    }
+
+        .LoginandSignUp-Container.active .FormContainer{
+            right: 0;
+            bottom: 30%;
+        }
+
+    .Toggle-Container::before{
+        left: 0;
+        top: -270%;
+        width: 100%;
+        height: 298%;
+        border-radius: 10vw;
+    }
+
+        .LoginandSignUp-Container.active .Toggle-Container::before{
+            left: 0;
+            top: 60%;
+        }
+
+        .LoginandSignUp-Container.active .Toggle-Switch.Left-Toggle-Button{
+            left: 0;
+            top: -30%;
+        }
+
+    .Toggle-Switch{ 
+        width: 100%;
+        height: 27%;
+    }
+        .Toggle-Switch.Left-Toggle-Button{ top: 0; }
+        .Toggle-Switch.Right-Toggle-Button{
+            right: 0;
+            bottom: -30%;
+        }
+
+            .LoginandSignUp-Container.active .Toggle-Switch.Right-Toggle-Button{ bottom: 0; }
+
+    .register h1{
+        font-size: 40px;
+    }            
+    .Right-Toggle-Button h1{
+        font-size: 40px;
+    }
+}
