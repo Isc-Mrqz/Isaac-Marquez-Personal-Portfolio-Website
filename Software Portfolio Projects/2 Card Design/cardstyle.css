@@ -1,0 +1,302 @@
+/* I applied a box-sizing layout globally and set a default font to be used.  */
+/* The font used was set to  'Orbitron', sans-serif */
+* {
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Styling used for the background */
+/* A fixed image is used as the background */
+body {
+  background-image: url(Images/CardComponentBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 2500px;
+}
+
+/* Styling used for the entire main Card Component */
+.Card-Component {
+  margin: auto;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  z-index: 1;
+  overflow-x: hidden;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 0 8px rgba(255, 0, 0, 0.2);
+  transition: transform 0.9s;
+}
+
+/* I added an on hover effect to the Card Component that gives it a 3D effect.*/
+.Card-Component:hover {
+  transform: rotateY(12deg) rotateX(2deg) scale(1); 
+  box-shadow: 0 20px 40px rgba(44, 39, 39, 0.3); 
+}
+
+/* Styling used to change or adjust the height of the Card Component for its different sections. */
+.Card-Component[data-state="#AboutSection"] {
+  height: 600px;
+}
+
+.Card-Component[data-state="#AboutSection"] .Card-Component-wholeContent {
+  padding-top: 0;
+}
+
+.Card-Component[data-state="#ContactSection"] {
+  height: 460px;
+}
+
+.Card-Component[data-state="#ServicesSection"] {
+  height: 650px;
+}
+
+/* Styling used to change or adjust the card when it is active */
+/* This uses a smaller header when active */
+.Card-Component.is-active header {
+  height: 83px;
+}
+
+.Card-Component.is-active .Card-Component-Background {
+  height: 105px;
+  top: -30px;
+}
+
+/* This adjusts or changes the position of the image when active */
+.Card-Component.is-active .Card-Component-userImage {
+  transform: none;
+  left: 15px;
+  width: 80px;
+  height: 80px;
+  top: 10px;
+}
+
+/* This changes the text placement when active */
+.Card-Component.is-active .Card-Component-userName,
+.Card-Component.is-active .Card-Component-userTitle {
+  left: 110px;
+  transform: none;
+}
+
+.Card-Component.is-active .Card-Component-userName {
+  bottom: 15px;
+  font-size: 25px;
+}
+
+.Card-Component.is-active .Card-Component-userTitle {
+  bottom: 12px;
+  font-size: 13px;
+}
+
+/* Styling used for the Header section which contains the user image and background */
+header {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  height: 210px;
+}
+
+/* Styling used to make the background image blurred */
+.Card-Component-Background {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  transform: scale(2);
+  filter: blur(10px);
+}
+
+/* Styling used for the image used by the user */
+.Card-Component-userImage {
+  position: absolute;
+  object-position: center;
+  object-fit: cover;
+  width: 130px;
+  height: 130px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.637);
+  transform: translateX(100%) translateY(20px);
+}
+
+/* Styling used to style and position the name of the user */
+.Card-Component-userName {
+  position: absolute;
+  font-size: 25px;
+  transform: translateX(50%) translateY(138px);
+}
+
+/* Styling used to style and position the title of the user */
+.Card-Component-userTitle {
+  position: absolute;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.575);
+  font-size: 14px;
+  font-weight: 400;
+  transform: translateX(120%) translateY(188px);
+}
+
+/* Styling used for all the contents within the Card-Component-wholeContent container  */
+.Card-Component-wholeContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 15px;
+}
+
+/* Added padding inside the Card Component */
+.Card-Component-Contents {
+  padding: 30px;
+}
+
+/* Styling used for the paragraph tag within the Card-Component-Contents container */
+.Card-Component-Contents p {
+  margin: 0;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* Social Media Buttons */
+.Card-Component-userSocialMedia {
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
+  margin-bottom: 30px;
+}
+
+/* Styling used for the anchor tags within the Card-Card-Component-userSocialMedia container */
+.Card-Component-userSocialMedia a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: rgba(133, 18, 18, 0.766);
+  background-color: rgba(128, 128, 128, 0.155);
+  margin-right: 14px;    
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+/* I added an on hover effect for the Social Media Buttons */
+.Card-Component-userSocialMedia a:hover {
+  background-color: rgba(133, 18, 18, 0.766); 
+  color: white; 
+  transform: scale(1.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.29); 
+}
+
+/* Styling used for the Card Component Buttons */
+.Card-Component-Buttons {
+  display: flex;
+  position: sticky;
+  background-color: white;
+  margin-top: auto;
+  bottom: 0;
+  left: 0;
+}
+
+/* Styling used so that each section of the Card Component has their own individual buttons */
+.Card-Component-Buttons button {
+  flex: 1 1 auto;
+  background: none;
+  color: #333;
+  font-size: 15px;
+  padding: 10px 10px;
+  border: 0;
+  cursor: pointer;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+/* I added an on hover effect and styling for the active state of the buttons */
+.Card-Component-Buttons button.is-active,
+.Card-Component-Buttons button:hover {
+  border-bottom: 7px solid black;
+  background: linear-gradient(to bottom, rgba(97, 54, 59, 0) 0%, rgba(207, 153, 159, 0.2) 44%, rgba(211, 174, 178, 0.4) 100%);
+}
+
+/* Styling used to hide the section content by default */
+.Card-Component-Sections {
+  display: none;
+}
+
+/* This styling shows the section when active */
+.Card-Component-Sections.is-active {
+  display: block;
+  animation: transition 0.9s both;
+}
+
+/* Styling for the Service Section within the Card Component */
+.Card-Component-servicesContents {
+  margin-top: 15px;
+}
+
+/* Styling for the h4 tags in the Service Section */
+.Card-Component-servicesContents h4 {
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
+/* Styling for the p tags in the Service Section */
+.Card-Component-servicesContents p {
+  font-size: 14px;
+  color: rgba(133, 18, 18, 0.766);
+}
+
+/* Styling for the anchor tags in the Service Section */
+.Card-Component-Contents a {
+  text-decoration: none;
+  color: rgba(133, 18, 18, 0.766);
+}
+
+/* Styling for the Contact Me Button */
+.Contact-Me-Button {
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(to right, rgba(54,35,41,1) 0%, rgba(25, 28, 40, 0.8) 96%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  padding: 10px 15px;
+  width: 330px;
+  border-radius: 10px;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* I added an on hover effect to the COntact Me Button that gives a lifting effect */
+.Contact-Me-Button:hover {
+  background: linear-gradient(to right, rgba(25,28,40,1) 0%, rgba(54,35,41,1) 96%);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+  transform: translateY(-8px);
+}
+
+/* Styling for the Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+/* CSS Animation */
+/* @keyframes are used for the fade in or transiton effect */
+@keyframes transition {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
