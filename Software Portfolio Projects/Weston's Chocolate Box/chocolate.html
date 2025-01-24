@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to the CSS/Stylesheets -->
+    <link rel="stylesheet" href="/Software Portfolio Projects/Weston's Chocolate Box/chocolatestyle.css">
+
+    <!-- Link to the Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Website Title -->
+    <title>Weston's Chocolate Box</title>
+    
+    <!-- Website Icon -->
+    <link rel="icon" href="/Software Portfolio Projects/Weston's Chocolate Box/Images/Weston's Chocolates Logo.png">
+
+</head>
+<body>
+    
+    <!-- Section tag for the Home Section of the webpage -->
+    <section class="Home-Section" id="Home">
+
+        <!-- Navigation Menu -->
+        <div class="Navigation-Menu">
+
+            <!-- Website Logo in the Navigation Menu -->
+            <a href="#"><img src="/Software Portfolio Projects/Weston's Chocolate Box/Images/Weston's Chocolates Logo.png" alt="Image of Weston's Chocolates Logo" class="Westons-Chocolate-Box-LOGO"></a>
+
+            <!-- Responsive Menu Button -->
+            <div class="Website-Menu-Button" onclick="menuToggle();">
+                <!-- BoxIcon Menu Icon -->
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <!-- Navigational Links for the Webpage -->
+            <ul class="Navigational-Links">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About Us</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#LoginandSignUp">Log In</a></li>
+            </ul>
+        </div>
+
+        <!-- Contents of the Homepage -->
+        <div class="Home-Page-Contents">
+
+             <!-- Text Description on the Homepage -->
+            <div class="Home-Page-Contents-Description">
+                <h1>WESTON'S CHOCOLATE BOX</h1>
+                <p>Create your perfect treat with Weston's Chocolate Box—customize your own delicious selection!</p>
+
+                <!-- Create Now Button -->
+                <a href="#Products">CREATE NOW!</a>
+
+            </div>
+
+            <!-- Homepage Chocolate Image -->
+            <div class="Chocolate-Box-Image">
+                <img src="/Software Portfolio Projects/Weston's Chocolate Box/Images/Gold.png" class="Primary-Chocolate-Image">
+            </div>
+        </div>
+
+        <!-- Buttons for the Color Changing Feature -->
+        <ul class="Color-Change-Button">
+            <li><img src="/Software Portfolio Projects/Weston's Chocolate Box/Images/Gold.png" onclick="imgSlider('/Software Portfolio Projects/Weston\'s Chocolate Box/Images/Gold.png');changeBgColor('#f0c880')"></li>
+            <li><img src="/Software Portfolio Projects/Weston's Chocolate Box/Images/Blue.png" onclick="imgSlider('/Software Portfolio Projects/Weston\'s Chocolate Box/Images/Blue.png');changeBgColor('#9ab6dd')"></li>
+            <li><img src="/Software Portfolio Projects/Weston's Chocolate Box/Images/Pink.png" onclick="imgSlider('/Software Portfolio Projects/Weston\'s Chocolate Box/Images/Pink.png');changeBgColor('#f38289')"></li>
+        </ul>
+
+    </section>
+
+    <!-- Section tag for the About Section of the webpage -->
+    <!-- About Section -->
+    <section class="About-Section" id="About">
+
+        <!-- About Section Contents -->
+        <div class="About-Section-Description">
+
+            <!-- Text Description about the Weston's Chocolate Box Company -->
+            <h1>About Us</h1>
+            <p>At Weston's Chocolate Box, we aim to make every moment sweeter. It is our mission to provide everyone with a sweet experience by providing them with handcrafted chocolates made with the finest ingredients. You can customize your own box of chocolates that suits your own preferences and share that sweet moment with others!</p>
+
+            <!-- Learn More Button -->
+            <a href="#">LEARN MORE</a>
+        </div>
+
+        <!-- Image of chocolate in the About Us Section -->
+        <div class="About-Section-Image">
+            <img src="/Software Portfolio Projects/Weston's Chocolate Box/Images/About Us.jpg" alt=" Image of Chocolates">
+        </div>
+    </section>
+    
+
+    <!-- Product Section -->
+    <div class="Products-Container" id="Products">
+
+        <!-- Products Section Title -->
+        <h1>Products</h1>
+
+        <!-- Occasion selection -->
+        <div class="Occasions-Category">
+          <label for="occasion">Select Occasion:</label>
+          <select id="occasion" name="occasion">
+            <option value="birthday">Birthday</option>
+            <option value="anniversary">Anniversary</option>
+            <option value="valentines">Valentine's Day</option>
+            <option value="easter">Easter</option>
+            <option value="christmas">Christmas</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      
+        <!-- Chocolate Selection -->
+        <div class="Chocolate-Products-Container">
+          <h3>Select the Chocolates you want</h3>
+          <div id="Chocolate-Products-Items">
+            <!-- The chocolate products would be shown here -->
+          </div>
+        </div>
+      
+        <!-- Basket -->
+        <div class="Basket-Container">
+          <h3>Here is your Basket</h3>
+          <ul id="Basket-Selected-Products">
+            <!-- The selected chocolate products will be added here -->
+          </ul>
+
+          <!-- Total Price of the Selected Products -->
+          <p>Your total: $<span id="Total-Price">0</span></p>
+
+          <!-- Purchase Button -->
+          <button id="Purchase-Button">Purchase</button>
+        </div>
+      </div>
+      
+
+    <!-- Section tag for the Contact Section of the webpage -->
+    <!-- Contact Section -->
+    <section class="Main-Contact-Container" id="Contact">
+    <div id="Contact-Form-Container">
+
+        <!-- Left Container -->
+        <div class="Left-Contact-Container">
+
+          <!-- Weston's Chocolate Box Contact Informations -->
+          <div class="Company-Contact-Information">
+
+            <!-- Address -->
+            <div>
+              <h3><i class='bx bxs-factory' ></i> Visit Us</h3>
+              <p>Al Qulaya'ah, Sharjah, United Arab Emirates</p>
+            </div>
+
+            <!-- Contact Number -->
+            <div> 
+              <h3><i class='bx bxs-phone' ></i> Call Us</h3>
+              <p>+971-50-1234567</p>
+            </div>
+
+            <!-- Email Address -->
+            <div>
+              <h3><i class='bx bxs-envelope' ></i> Email Us</h3>
+              <p>WestonChocolateBox@email.com</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Container -->
+        <div class="Right-Contact-Container">
+          <h1>Contact Us</h1>
+
+          <!-- Contact Form where the user can enter their inputs. -->
+          <form>
+
+            <!-- Name -->
+            <div class="Right-Contact-Form-Inputs">
+              <label for="name-input">ENTER YOUR FULL NAME</label>
+              <input id="name-input" type="text" placeholder="Name" required="required"/>
+            </div>
+
+            <!-- Email -->
+            <div class="Right-Contact-Form-Inputs">
+              <label for="email-input">ENTER YOUR EMAIL</label>
+              <input id="email-input" type="text" placeholder="Eg. WestonChocolateBox@email.com" required="required"/>
+            </div>
+
+            <!-- Contact Number -->
+            <div class="Right-Contact-Form-Inputs">
+              <label for="phone-input">ENTER YOUR CONTACT NUMBER</label>
+              <input id="phone-input" type="text" placeholder="Eg. XXX-971-2-1234567" required="required"/>
+            </div>
+
+            <!-- Message Box -->
+            <div class="Right-Contact-Form-Inputs">
+              <label for="message-textarea">ENTER YOUR MESSAGE</label>
+              <textarea id="message-textarea" placeholder="Write your message"></textarea>
+            </div>
+
+            <!-- Send Message Button -->
+            <button>Send Message</button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Section tag for the Login and Sign Up Section of the webpage -->
+    <!-- Login and Sign Up Section -->
+    <section class="LoginandSignUp" id="LoginandSignUp">
+    <div class="LoginandSignUp-Container">
+
+        <!-- Login Form -->
+        <div class="FormContainer login">
+            <form action="#">
+                <h1>Login</h1>
+
+                <!-- Username Input -->
+                <div class="Input-Container">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user-circle' ></i>
+                </div>
+
+                <!-- Password Input -->
+                <div class="Input-Container">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="Forgot-Password-Container">
+                    <a>Forgot Password?</a>
+                </div>
+                <button type="submit" class="LoginandSignUp-Button">Login</button>
+
+            </form>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="FormContainer register">
+            <form action="#">
+                <h1>Registration</h1>
+
+                <!-- Username Input -->
+                <div class="Input-Container">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user-circle' ></i>
+                </div>
+
+                <!-- Email Address Input -->
+                <div class="Input-Container">
+                    <input type="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope' ></i>
+                </div>
+
+                <!-- Password Input -->
+                <div class="Input-Container">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="LoginandSignUp-Button">Register</button>
+
+            </form>
+        </div>
+
+        <!-- Container for the Register Toggle -->
+        <div class="Toggle-Container">
+            <div class="Toggle-Switch Left-Toggle-Button">
+                <h1>Welcome</h1>
+                <p>Create new account?</p>
+
+                <!-- Register Toggle Button -->
+                <button class="LoginandSignUp-Button Register-Toggle">Register</button>
+            </div>
+
+            <!-- Container for the Login Toggle -->
+            <div class="Toggle-Switch Right-Toggle-Button">
+                <h1>Welcome Back!</h1>
+                <p>Already have an account?</p>
+
+                <!-- Login Toggle Button -->
+                <button class="LoginandSignUp-Button Login-Toggle">Login</button>
+            </div>
+        </div>
+
+    </div>
+
+    </section>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="/Software Portfolio Projects/Weston's Chocolate Box/chocolatescript.js"></script>
+
+</body>
+</html>
