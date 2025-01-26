@@ -213,7 +213,7 @@ body.loaded { overflow: visible; }
 .title-md,
 .title-sm,
 .label-lg {
-  color: var(--jet);
+  color: gray;
   font-weight: var(--fw-600);
   line-height: 1.2;
 }
@@ -526,7 +526,7 @@ body.loaded { overflow: visible; }
     transform-origin: right;
     width: 80%;
     height: 2px;
-    background-color: white;
+    background-color: #c59268;
     transition: transform var(--transition-1);
   }
 
