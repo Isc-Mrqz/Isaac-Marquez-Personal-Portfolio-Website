@@ -421,7 +421,7 @@ df-messenger .df-messenger-chat-icon {
 
 /* Add your own icon */
 df-messenger {
-  --df-messenger-icon-url: url('/assets/images/AIsaac\ Icon.png'); /* Replace with your icon URL */
+  --df-messenger-icon-url: url('/assets/images/AIsaac Icon.png'); /* Replace with your icon URL */
 }
 
 df-messenger .df-messenger-header {
