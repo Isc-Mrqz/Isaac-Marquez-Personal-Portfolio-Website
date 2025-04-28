@@ -415,25 +415,7 @@
 }
 
 
-
-/* Customizing the title bar color */
+/* custom-style.css */
 df-messenger {
-  --df-messenger-titlebar-color: #C59268; /* Set the color of the title bar */
-  --df-messenger-chat-background-color: #ffffff; /* Set background color for chat window */
-  --df-messenger-chat-title-color: #ffffff; /* Set title color */
-}
-
-/* Customizing the chatbot's icon */
-df-messenger {
-  --df-messenger-avatar-url: url('/assets/images/AIsaac Icon.png'); /* Set the avatar image */
-}
-
-/* Customize the button color for user inputs */
-df-messenger {
-  --df-messenger-button-color: #C59268; /* Change button color */
-}
-
-/* Adjusting the chatbot button hover color */
-df-messenger button:hover {
-  background-color: #b18b60; /* Slightly darker color on hover */
+  --df-messenger-avatar-url: url('/assets/images/AIsaac Icon.png'); /* Path to your custom icon */
 }
