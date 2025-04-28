@@ -413,22 +413,3 @@
   .about-list { gap: 40px; }
 
 }
-
-/* Hide Dialogflow default icon */
-df-messenger .df-messenger-chat-icon {
-  display: none !important;
-}
-
-/* Add your own icon */
-df-messenger {
-  --df-messenger-icon-url: url('/assets/images/AIsaac Icon.png') !important; /* Ensure the path is correct */
-}
-
-df-messenger .df-messenger-header {
-  background-image: var(--df-messenger-icon-url);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent !important; /* Ensure the background is transparent */
-}
-
