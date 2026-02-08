@@ -367,13 +367,14 @@ body.loaded { overflow: visible; }
 .navbar-item:not(:last-child) { border-block-end: 1px solid var(--jet_a10); }
 
 .navbar-link {
+  color: #c59268;
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 16px 15px;
   transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus-visible, .active) { color: #c59268; }
+.navbar-link:is(:hover, :focus-visible, .active) { color: #a55c20; }
 
 
 
