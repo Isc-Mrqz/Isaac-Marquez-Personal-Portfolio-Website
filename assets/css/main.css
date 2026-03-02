@@ -170,7 +170,7 @@
   #SKILLS
 \*-----------------------------------*/
 
-.skill { padding-block-end: 0; }
+/* .skill { padding-block-end: 0; } */
 
 .skill .container,
 .skill-list { display: grid; }
@@ -392,7 +392,7 @@
    * SKILL
    */
 
-  .skill .container { align-items: flex-start; }
+  /* .skill .container { align-items: flex-start; } */
 
 }
 
